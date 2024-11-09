@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="snake" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Κλάση snake
+Εδώ βάζουμε τις ενέργειες και τα δεδομένα που χρειαζόμαστε για το φιδάκι μας. Μέσα εδώ ορίζουμε πως κινείται το φίδι, τι μπορεί και τι δεν μπορεί να φάει κλπ.
+</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the snake wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="moveSnake()" expression-java="moveSnake()" enable="true"/>
+                <call expression="checkForFruit()" expression-java="checkForFruit()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="moveSnake" enable="true">
+            <javadoc xml:space="preserve">Με αυτήν την συνάρτηση το φίδι κινείται. Πάει πάνω αν πατήσεις w ή το πάνω βελάκι, κάτω με s ή κάτω βελάκι κλπ. Οι κάθετες γραμμές (||) σημαίνουν ή.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="Greenfoot.isKeyDown(&quot;w&quot;)||Greenfoot.isKeyDown(&quot;up&quot;)" condition-java="Greenfoot.isKeyDown(&quot;w&quot;) || Greenfoot.isKeyDown(&quot;up&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="setLocation(getX(),getY()-5)" expression-java="setLocation(getX(), getY() - 5)" enable="true"/>
+                    </ifStatements>
+                    <elseIf condition="Greenfoot.isKeyDown(&quot;s&quot;)||Greenfoot.isKeyDown(&quot;down&quot;)" condition-java="Greenfoot.isKeyDown(&quot;s&quot;) || Greenfoot.isKeyDown(&quot;down&quot;)">
+                        <call expression="setLocation(getX(),getY()+5)" expression-java="setLocation(getX(), getY() + 5)" enable="true"/>
+                    </elseIf>
+                    <elseIf condition="Greenfoot.isKeyDown(&quot;d&quot;)||Greenfoot.isKeyDown(&quot;right&quot;)" condition-java="Greenfoot.isKeyDown(&quot;d&quot;) || Greenfoot.isKeyDown(&quot;right&quot;)">
+                        <call expression="setLocation(getX()+5,getY())" expression-java="setLocation(getX() + 5, getY())" enable="true"/>
+                    </elseIf>
+                    <elseIf condition="Greenfoot.isKeyDown(&quot;a&quot;)||Greenfoot.isKeyDown(&quot;left&quot;)" condition-java="Greenfoot.isKeyDown(&quot;a&quot;) || Greenfoot.isKeyDown(&quot;left&quot;)">
+                        <call expression="setLocation(getX()-5,getY())" expression-java="setLocation(getX() - 5, getY())" enable="true"/>
+                    </elseIf>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="checkForFruit" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="isTouching(fruit.class)" condition-java="isTouching(fruit.class)" enable="true">
+                    <ifStatements>
+                        <variable type="fruit" type-java="fruit" name="f" value="(fruit)getOneIntersectingObject(fruit.class)" value-java="(fruit)getOneIntersectingObject(fruit.class)" enable="true"/>
+                        <if condition="f.isLethal()" condition-java="f.isLethal()" enable="true">
+                            <ifStatements/>
+                            <else>
+                                <call expression="getWorld().removeObject(f)" expression-java="getWorld().removeObject(f)" enable="true"/>
+                                <variable type="MyWorld" type-java="MyWorld" name="world" value="(MyWorld)getWorld()" value-java="(MyWorld)getWorld()" enable="true"/>
+                                <call expression="world.spawnFruit()" expression-java="world.spawnFruit()" enable="true"/>
+                            </else>
+                        </if>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

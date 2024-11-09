@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="fruit" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Κλάση fruit
+Εδώ βάζουμε ενέργειες και δεδομένα που θέλουμε να έχουν όλα τα φρουτάκια μας. Ό,τι υπάρχει εδώ, το έχουν και οι υποκλάσεις του φρούτου: apple, banana, cherry.</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the fruit wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+        <method access="public" type="boolean" type-java="boolean" name="isLethal" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <return value="false" value-java="false" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

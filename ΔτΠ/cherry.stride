@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="cherry" extends="fruit" extends-java="fruit" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Κλάση cherry
+Όπως οι προηγούμενες κλάσεις, το κεράσι είναι υποκλάση του φρούτου. Και εδώ μπορούμε να κάνουμε ότι και στο μήλο και την μπανάνα.</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the cherry wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+    </methods>
+</class>

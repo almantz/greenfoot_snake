@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="MyWorld" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Κλάση MyWorld
+Εδώ έχουμε όλες τις ενέργειες που γίνονται στον κόσμο του παιχνιδιού μας. Εδώ είναι που δημιουργούνται τα φρούτα μας και δημιουργείται, κινείται και τρώει το φιδάκι μας.
+@author (your name) @version (a version number or a date)</javadoc>
+    <imports>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <comment xml:space="preserve">(World, Actor, GreenfootImage, Greenfoot and MouseInfo)</comment>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Constructor for objects of class MyWorld.</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="600,400,1" params-java="600, 400, 1"/>
+            <body>
+                <comment xml:space="preserve">Create a new world with 600x400 cells with a cell size of 1x1 pixels.</comment>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="spawnFruit" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="int" type-java="int" name="num" value="Greenfoot.getRandomNumber(4)" value-java="Greenfoot.getRandomNumber(4)" enable="true"/>
+                <variable type="fruit" type-java="fruit" name="f" enable="true"/>
+                <if condition="num==1" condition-java="num == 1" enable="true">
+                    <ifStatements>
+                        <assign dest="f" dest-java="f" src="new apple()" src-java=" new apple()" enable="true"/>
+                    </ifStatements>
+                    <elseIf condition="num==2" condition-java="num == 2">
+                        <assign dest="f" dest-java="f" src="new banana()" src-java=" new banana()" enable="true"/>
+                    </elseIf>
+                    <elseIf condition="num==3" condition-java="num == 3">
+                        <assign dest="f" dest-java="f" src="new cherry()" src-java=" new cherry()" enable="true"/>
+                    </elseIf>
+                    <else>
+                        <assign dest="f" dest-java="f" src="new lemon()" src-java=" new lemon()" enable="true"/>
+                    </else>
+                </if>
+                <call expression="addObject(f,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400))" expression-java="addObject(f, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400))" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

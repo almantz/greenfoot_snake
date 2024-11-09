@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=banana
+comment0.text=\r\n\ \u039A\u03BB\u03AC\u03C3\u03B7\ banana\r\n\ \u038C\u03C0\u03C9\u03C2\ \u03BA\u03B1\u03B9\ \u03C4\u03BF\ \u03BC\u03AE\u03BB\u03BF,\ \u03B7\ \u03BC\u03C0\u03B1\u03BD\u03AC\u03BD\u03B1\ \u03B5\u03AF\u03BD\u03B1\u03B9\ \u03C5\u03C0\u03BF\u03BA\u03BB\u03AC\u03C3\u03B7\ \u03C4\u03BF\u03C5\ \u03C6\u03C1\u03BF\u03CD\u03C4\u03BF\u03C5.\ \u039C\u03C0\u03BF\u03C1\u03BF\u03CD\u03BC\u03B5\ \u03BD\u03B1\ \u03BA\u03AC\u03BD\u03BF\u03C5\u03BC\u03B5\ \u03CC\u03C4\u03B9\ \u03BA\u03B1\u03B9\ \u03C3\u03C4\u03BF\ \u03BC\u03AE\u03BB\u03BF.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ banana\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=2
