@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="score" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Κλάση score
+Η κλάση αυτή θα κρατάει το σκορ μας. Κάθε φορά που το φιδάκι τρώει ένα φρούτο αυξάνεται το σκορ του. Κάθε φρουτάκι δίνει διαφορετική αύξηση στο σκορ. Υλοποιείστε την για να δούμε πόσους βαθμούς μαζεύουμε!</javadoc>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="public" type="int" type-java="int" name="number" value="0" value-java="0" enable="true"/>
+    </fields>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the score wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+        <method access="public" type="void" type-java="void" name="addScore" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params>
+                <params type="int" type-java="int" name="toAdd"/>
+            </params>
+            <throws/>
+            <body>
+                <assign dest="number" dest-java="number" src="number+toAdd" src-java="number + toAdd" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

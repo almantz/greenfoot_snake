@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class name="banana" extends="fruit" extends-java="fruit" enable="true" strideversion="1">
     <javadoc xml:space="preserve">Κλάση banana
-Όπως και το μήλο, η μπανάνα είναι υποκλάση του φρούτου. Μπορούμε να κάνουμε ότι και στο μήλο.</javadoc>
+Όπως και το μήλο, η μπανάνα είναι υποκλάση του fruit. Μπορούμε να κάνουμε ό,τι και στο μήλο.</javadoc>
     <imports>
         <import target="java.util.*" enable="true"/>
         <import target="greenfoot.*" enable="true"/>
@@ -15,6 +15,14 @@
             <params/>
             <throws/>
             <body/>
+        </method>
+        <method access="public" type="int" type-java="int" name="addValue" enable="true">
+            <javadoc xml:space="preserve">Η μπανάνα προσθέτει 5 στο σκορ!</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <return value="5" value-java="5" enable="true"/>
+            </body>
         </method>
     </methods>
 </class>

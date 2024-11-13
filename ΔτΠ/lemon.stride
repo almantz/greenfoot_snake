@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class name="lemon" extends="fruit" extends-java="fruit" enable="true" strideversion="1">
-    <javadoc xml:space="preserve">Κλάση λεμόνι
-Όπως τα προηγούμενα φρούτα, είναι υποκλάση του φρούτου. Προσοχή! Αν το φιδάκι φάει λεμόνι το παιχνίδι τελειώνει!</javadoc>
+    <javadoc xml:space="preserve">Κλάση lemon
+Όπως τα προηγούμενα φρούτα, είναι υποκλάση του fruit. Προσοχή! Αν το φιδάκι φάει λεμόνι το παιχνίδι τελειώνει!</javadoc>
     <imports>
         <import target="java.util.*" enable="true"/>
         <import target="greenfoot.*" enable="true"/>
@@ -17,7 +17,7 @@
             <body/>
         </method>
         <method access="public" type="boolean" type-java="boolean" name="isLethal" enable="true">
-            <javadoc xml:space="preserve"/>
+            <javadoc xml:space="preserve">Το λεμόνι τελειώνει το παιχνίδι!</javadoc>
             <params/>
             <throws/>
             <body>

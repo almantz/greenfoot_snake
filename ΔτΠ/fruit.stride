@@ -17,11 +17,19 @@
             <body/>
         </method>
         <method access="public" type="boolean" type-java="boolean" name="isLethal" enable="true">
-            <javadoc xml:space="preserve"/>
+            <javadoc xml:space="preserve">Η συνάρτηση επιστρέφει αν το φρούτο τελειώνει το παιχνίδι. Η προκαθορισμένη τιμή είναι false, δηλαδή το παιχνίδι συνεχίζει. Μήπως αυτό αλλάζει σε κάποιο από τα φρούτα;</javadoc>
             <params/>
             <throws/>
             <body>
                 <return value="false" value-java="false" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="int" type-java="int" name="addValue" enable="true">
+            <javadoc xml:space="preserve">Η συνάρτηση αυτή επιστρέφει πόσο προσθέτει το φρούτο στο σκορ. Η προκαθορισμένη τιμή είναι 0. Δείτε τι επιστρέφει το κάθε φρουτάκι ξεχωριστά στις υποκλάσεις.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <return value="0" value-java="0" enable="true"/>
             </body>
         </method>
     </methods>

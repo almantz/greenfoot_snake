@@ -5,7 +5,7 @@ import greenfoot.*;
 
 /**
  * Κλάση banana
- * Όπως και το μήλο, η μπανάνα είναι υποκλάση του φρούτου. Μπορούμε να κάνουμε ότι και στο μήλο.
+ * Όπως και το μήλο, η μπανάνα είναι υποκλάση του fruit. Μπορούμε να κάνουμε ό,τι και στο μήλο.
  */
 public class banana extends fruit
 {
@@ -15,5 +15,13 @@ public class banana extends fruit
      */
     public void act()
     {
+    }
+
+    /**
+     * Η μπανάνα προσθέτει 5 στο σκορ!
+     */
+    public int addValue()
+    {
+        return 5;
     }
 }

@@ -7,22 +7,34 @@
         <import target="greenfoot.*" enable="true"/>
     </imports>
     <implements/>
-    <fields/>
+    <fields>
+        <variable access="public" type="score" type-java="score" name="s" value="new score()" value-java=" new score()" enable="true"/>
+    </fields>
     <constructors>
         <comment xml:space="preserve">(World, Actor, GreenfootImage, Greenfoot and MouseInfo)</comment>
         <constructor access="public" enable="true">
-            <javadoc xml:space="preserve">Constructor for objects of class MyWorld.</javadoc>
+            <javadoc xml:space="preserve">Αυτή η συνάρτηση δημιουργεί τον κόσμο. Στην αρχή δημιουργεί το background και μετά δημιουργεί και τοποθετεί στον κόσμο το φιδάκι και από ένα μέχρι 5 φρούτα. Η επιλογή του αριθμού των φρούτων και της θέσης του φιδιού γίνεται τυχαία.</javadoc>
             <params/>
             <throws/>
             <delegate target="super" params="600,400,1" params-java="600, 400, 1"/>
             <body>
+                <variable type="snake" type-java="snake" name="sn" value="new snake()" value-java=" new snake()" enable="true"/>
+                <call expression="addObject(sn,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400))" expression-java="addObject(sn, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400))" enable="true"/>
+                <call expression="addObject(s,getWidth()-50,20)" expression-java="addObject(s, getWidth() - 50, 20)" enable="true"/>
+                <call expression="showScore()" expression-java="showScore()" enable="true"/>
+                <variable type="int" type-java="int" name="num" value="Greenfoot.getRandomNumber(5)" value-java="Greenfoot.getRandomNumber(5)" enable="true"/>
+                <variable type="int" type-java="int" name="i" value="1" value-java="1" enable="true"/>
+                <while condition="i&lt;=num" condition-java="i &lt;= num" enable="true">
+                    <call expression="spawnFruit()" expression-java="spawnFruit()" enable="true"/>
+                    <assign dest="i" dest-java="i" src="i+1" src-java="i + 1" enable="true"/>
+                </while>
                 <comment xml:space="preserve">Create a new world with 600x400 cells with a cell size of 1x1 pixels.</comment>
             </body>
         </constructor>
     </constructors>
     <methods>
         <method access="public" type="void" type-java="void" name="spawnFruit" enable="true">
-            <javadoc xml:space="preserve"/>
+            <javadoc xml:space="preserve">Η συνάρτηση διαλέγει ένα αριθμό από το 1 μέχρι το 4 και με βάση αυτόν τον αριθμό εμφανίζει ένα φρούτο στην οθόνη.</javadoc>
             <params/>
             <throws/>
             <body>
@@ -43,6 +55,15 @@
                     </else>
                 </if>
                 <call expression="addObject(f,Greenfoot.getRandomNumber(600),Greenfoot.getRandomNumber(400))" expression-java="addObject(f, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400))" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="showScore" enable="true">
+            <javadoc xml:space="preserve">Με αυτήν την συνάρτηση εμφανίζεται το σκορ στην οθόνη.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="GreenfootImage" type-java="GreenfootImage" name="image" value="new GreenfootImage(&quot;Score: &quot;+s.number,24,Color.WHITE,new Color(0,0,0,0))" value-java=" new GreenfootImage(&quot;Score: &quot; + s.number, 24, Color.WHITE, new Color(0, 0, 0, 0))" enable="true"/>
+                <call expression="s.setImage(image)" expression-java="s.setImage(image)" enable="true"/>
             </body>
         </method>
     </methods>
